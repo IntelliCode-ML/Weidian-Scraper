@@ -24,12 +24,12 @@ import undetected_chromedriver as uc
 import os
 
 
-def scrape_product(driver, product_link):
+def scrape_product(driver):
     """
     Scrapes detailed product information from a Weidian product page.
     
     Args:
-        driver: Selenium WebDriver instance
+        driv    er: Selenium WebDriver instance
         product_link (str): URL of the product page to scrape
         
     Returns:
@@ -113,7 +113,7 @@ def main(Links):
     4. Exports the results to an Excel file named 'product_variants.xlsx'
     """
     options = uc.ChromeOptions()
-    options.add_argument('--headless')  # Run in headless mode
+    # options.add_argument('--headless')  # Run in headless mode
     options.add_argument('--disable-gpu')
     options.add_argument('--window-size=1920,1080')
     options.add_argument('--no-sandbox')
